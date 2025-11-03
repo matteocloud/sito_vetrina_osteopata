@@ -53,7 +53,7 @@ const Header = () => {
           className="flex items-center gap-3 text-left"
           aria-label="Torna all'inizio"
         >
-          <LogoCB className="h-16 w-16" />
+          <LogoCB className="h-24 w-24" />
           <span className="hidden text-base font-semibold uppercase tracking-[0.25em] text-slate-700 sm:block">
             Osteopata Chiara Benini
           </span>
