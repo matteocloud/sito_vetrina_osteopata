@@ -27,7 +27,7 @@ export const CONTACT_DETAILS: ContactInfo = {
   hours: [
     {
       label: "Lunedì – Venerdì",
-      value: "09:00 – 13:00 · 14:00 – 18:00"
+      value: "09:00 – 13:00 · 14:00 – 19:00"
     },
     {
       label: "Sabato",
