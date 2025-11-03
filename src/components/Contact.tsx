@@ -137,15 +137,15 @@ type ContactFieldProps = {
 
 const ContactField = ({ icon: Icon, label, value, href }: ContactFieldProps) => {
   const content = (
-    <div className="flex items-center gap-3 rounded-2xl border border-brand-primary/10 bg-white px-4 py-3 shadow-sm transition hover:border-brand-primary/30 hover:shadow">
+    <div className="flex flex-col items-center gap-3 rounded-2xl border border-brand-primary/10 bg-white px-4 py-3 text-center shadow-sm transition hover:border-brand-primary/30 hover:shadow md:flex-row md:items-center md:text-left">
       <div className="rounded-full bg-brand-primary/10 p-2 text-brand-primary">
         <Icon className="h-4 w-4" aria-hidden="true" />
       </div>
-      <div>
-        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-muted">
+      <div className="space-y-1 text-center md:text-left">
+        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-muted md:text-left">
           {label}
         </p>
-        <div className="text-sm font-medium text-slate-700">{value}</div>
+        <div className="text-sm font-medium text-slate-700 md:text-left">{value}</div>
       </div>
     </div>
   );
