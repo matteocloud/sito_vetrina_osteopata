@@ -87,7 +87,7 @@ const Contact = () => {
             ))}
           </div>
         </div>
-        <div className="grid gap-4 md:grid-cols-2 max-w-4xl mx-auto w-full">
+        <div className="grid w-full max-w-3xl gap-6 mx-auto">
           {CONTACT_DETAILS.locations.map((location) => (
             <div
               key={`${location.address}-map`}
