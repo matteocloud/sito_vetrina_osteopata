@@ -17,7 +17,7 @@ const About = () => {
       description="Mi chiamo Chiara Benini e accompagno le persone in un percorso di benessere quotidiano. Ascolto, empatia e tecnica osteopatica si uniscono per creare trattamenti su misura che rispettano i tempi e le esigenze di ogni paziente."
     >
       <div className="grid gap-12 md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] md:items-center">
-        <div className="relative">
+        <div className="relative hidden md:block">
           <div className="absolute inset-0 -left-6 -top-6 rounded-3xl bg-brand-primary/10" />
           <div className="relative overflow-hidden rounded-3xl border border-brand-primary/20 bg-white shadow-soft">
             <img
