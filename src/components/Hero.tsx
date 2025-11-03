@@ -23,16 +23,16 @@ const Hero = () => {
       role="banner"
     >
       <div className="mx-auto flex max-w-7xl flex-col gap-12 px-6 py-16 md:flex-row md:items-center md:justify-between md:px-10 md:py-24">
-        <div className="flex-1 space-y-6">
+        <div className="flex-1 flex flex-col gap-6">
           <blockquote className="text-xl italic text-slate-700">
             “Un approccio dolce e naturale per favorire l&apos;equilibrio posturale e funzionale.”
           </blockquote>
-          <p className="inline-flex items-center gap-2 rounded-full border border-brand-accent/40 bg-brand-accent/10 px-4 py-2 text-sm font-semibold text-brand-accent">
+          <p className="mx-auto flex w-full max-w-2xl items-center justify-center rounded-full border border-brand-accent/40 bg-brand-accent/10 px-6 py-3 text-center text-base font-semibold text-brand-accent sm:text-lg mb-16 md:mb-24">
             Dalla nascita, verso un futuro in salute.
           </p>
           <h1
             id="hero-title"
-            className="text-4xl font-semibold leading-tight text-slate-900 sm:text-5xl lg:text-6xl"
+            className="text-2xl font-semibold leading-tight text-slate-900 sm:text-4xl lg:text-5xl"
           >
             Osteopatia per il tuo benessere quotidiano
           </h1>

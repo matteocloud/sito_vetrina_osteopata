@@ -21,7 +21,13 @@ const Contact = () => {
       id="contact"
       eyebrow="Prenota una visita"
       title="Contattami per informazioni o per fissare il tuo prossimo appuntamento"
-      description="Ricevo a Varese in Via Leonardo Da Vinci, 3 e a Calcinate del Pesce in Via Vespucci, 19. Puoi contattarmi telefonicamente, via WhatsApp oppure via email: ti risponderò appena possibile."
+      description={(
+        <>
+          Ricevo a Varese in Via Leonardo Da Vinci, 3 e a Calcinate del Pesce in Via Vespucci, 19.
+          <br />
+          Puoi contattarmi telefonicamente, via WhatsApp oppure via email: ti risponderò appena possibile.
+        </>
+      )}
     >
       <div className="grid gap-12 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:items-start">
         <div className="space-y-8 text-center lg:text-left lg:pr-10">

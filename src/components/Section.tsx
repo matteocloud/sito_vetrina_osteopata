@@ -5,7 +5,7 @@ type SectionProps = {
   id?: string;
   eyebrow?: string;
   title: string;
-  description?: string;
+  description?: ReactNode;
   background?: "default" | "muted";
   children: ReactNode;
   className?: string;
@@ -40,7 +40,7 @@ const Section = ({
             {title}
           </h2>
           {description ? (
-            <p className="text-lg text-slate-600">{description}</p>
+            <div className="text-lg text-slate-600">{description}</div>
           ) : null}
         </header>
         {children}

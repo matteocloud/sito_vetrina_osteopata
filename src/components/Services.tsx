@@ -59,8 +59,8 @@ const Services = () => {
     <Section
       id="services"
       eyebrow="Cosa tratto"
-      title="Trattamenti personalizzati per esigenze specifiche"
-      description="Ogni sessione parte da un ascolto attento e da una valutazione approfondita. L'obiettivo è liberare il movimento, alleviare il dolore e dare indicazioni chiare per mantenere i risultati nel tempo."
+      title="Trattamenti personalizzati per ogni esigenza"
+      description="Ogni trattamento parte da un ascolto attento e da una valutazione approfondita. L'obiettivo è migliorare il movimento, alleviare il dolore favorendo un buon equilibrio del corpo."
       background="muted"
     >
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
