@@ -1,6 +1,7 @@
 import { ArrowRight, MessageCircle } from "lucide-react";
 import { CONTACT_DETAILS } from "../constants";
 import { buildWhatsAppLink, handleBookVisit } from "../utils/booking";
+import { getAssetUrl } from "../utils/assets";
 
 const Hero = () => {
   const whatsappLink = buildWhatsAppLink({
@@ -80,8 +81,8 @@ const Hero = () => {
           <div className="absolute inset-0 -translate-x-6 scale-105 rounded-[3rem] bg-brand-primary/10 blur-3xl" />
           <div className="relative overflow-hidden rounded-3xl border border-brand-primary/20 bg-white shadow-soft">
             <img
-              src="/images/doctor-paceholder-v3.jpg"
-              alt="Foto dell'osteopata che sorride nello studio"
+              src={getAssetUrl("images/doctor-paceholder-v3.jpg")}
+              alt="Foto"
               className="h-full w-full object-cover object-center"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-brand-primary/20 to-transparent" />

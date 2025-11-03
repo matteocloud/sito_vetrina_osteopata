@@ -1,17 +1,18 @@
-type LogoVariant = "solid" | "outline";
+import { getAssetUrl } from "../utils/assets";
 
 type LogoCBProps = {
   className?: string;
   title?: string;
-  variant?: LogoVariant;
+  variant?: "solid" | "outline";
 };
 
 const LogoCB = (props: LogoCBProps) => {
   const { className = "", title = "Osteopata Chiara Benini" } = props;
+  const logoSrc = getAssetUrl("logo.png");
 
   return (
     <img
-      src="/logo.png"
+      src={logoSrc}
       alt={title}
       className={className}
       loading="lazy"
