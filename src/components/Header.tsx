@@ -70,6 +70,10 @@ const Header = () => {
           <a
             href="#hero"
             className="flex items-center gap-3 text-left"
+            onClick={(event) => {
+              event.preventDefault();
+              handleNavClick("#hero");
+            }}
             aria-label="Torna all'inizio"
           >
             <LogoCB className="h-24 w-24" />
