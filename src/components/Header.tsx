@@ -45,6 +45,11 @@ const Header = () => {
     setIsMobileNavOpen(false);
   };
 
+  const handleBookingClick = () => {
+    handleBookVisit();
+    setIsMobileNavOpen(false);
+  };
+
   return (
     <>
       {isMobileNavOpen ? (
@@ -99,7 +104,7 @@ const Header = () => {
             </a>
             <button
               type="button"
-              onClick={handleBookVisit}
+              onClick={handleBookingClick}
               className="rounded-full bg-brand-primary px-5 py-2 text-sm font-semibold text-white shadow-soft transition hover:-translate-y-0.5 hover:bg-brand-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-accent"
             >
               Prenota
