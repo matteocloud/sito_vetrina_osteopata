@@ -2,12 +2,19 @@ import { CheckCircle2 } from "lucide-react";
 import Section from "./Section";
 import { getAssetUrl } from "../utils/assets";
 
-const credentials = [
-  "Laurea in Osteopatia con specializzazione in ambito pediatrico",
-  "Aggiornamenti costanti su tecniche manuali dolci e approccio funzionale",
-  "Percorsi personalizzati per neonati, adulti, sportivi e donne in gravidanza",
-  "Collaborazioni con professionisti sanitari per un lavoro sinergico"
-];
+
+const biographyText = `
+Mi chiamo Chiara Benini.
+
+Ho frequentato il corso quinquennale di Osteopatia conseguendo il Bachelor in Osteopathic Science e il Master in Osteopathic Medicine presso l’Accademia Italiana di Medicina Osteopatica (AIMO) di Saronno, la quale collabora con la Health Sciences University di Londra. Tale collaborazione permette di avere titoli riconosciuti a livello internazionale.
+Durante questo percorso ho svolto più di 1000 ore di tirocinio clinico con pazienti dall’età neonatale all’età adulta. Ho avuto la possibilità di supportare, grazie ai trattamenti, gli atleti di nuoto durante il “trofeo Master Rari Nantes - Saronno”.
+Inoltre ho eseguito un corso di formazione breve riguardante la “Clinica gnatologica e osteopatia”.
+Da febbraio 2025 ho intrapreso una specializzazione nell’ambito neonatale-pediatrico.
+In aggiunta ho intrapreso il ruolo di assistente e tutor in formazione presso l’Accademia Italiana di Medicina Osteopatica (AIMO) supportando gli studenti durante le lezioni e la loro pratica clinica.
+Parallelamente sono un’insegnante di nuoto e nuoto sincronizzato, questo mi permette di apprezzare anche la combinazione tra lo sport e l’osteopatia.
+
+Credo in un approccio globale, fondato sull’ascolto, sul dialogo e sulla collaborazione tra professionisti. Ogni trattamento è personalizzato, frutto di un’attenta valutazione posturale e di un percorso di follow-up mirato a mantenere nel tempo i risultati raggiunti.
+`.trim();
 
 const About = () => {
   return (
@@ -15,7 +22,7 @@ const About = () => {
       id="about"
       eyebrow="Chi sono"
       title="Osteopata"
-      description="Mi chiamo Chiara Benini e accompagno le persone in un percorso di benessere quotidiano. Ascolto, empatia e tecnica osteopatica si uniscono per creare trattamenti su misura che rispettano i tempi e le esigenze di ogni paziente."
+      // description="Mi chiamo Chiara Benini e accompagno le persone in un percorso di benessere quotidiano. Ascolto, empatia e tecnica osteopatica si uniscono per creare trattamenti su misura che rispettano i tempi e le esigenze di ogni paziente."
     >
       <div className="grid gap-12 md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] md:items-center">
         <div className="relative hidden md:block">
@@ -29,23 +36,9 @@ const About = () => {
           </div>
         </div>
         <div className="space-y-6">
-          <p className="text-lg text-slate-600">
-            Credo in un approccio integrato che valorizzi il dialogo con il paziente
-            e la collaborazione con altre figure sanitarie. Ogni trattamento nasce
-            da un ascolto accurato, una valutazione posturale completa e un piano di
-            follow-up per consolidare i risultati.
+          <p className="text-lg text-slate-600 whitespace-pre-line">
+            {biographyText}
           </p>
-          <ul className="grid gap-4 text-sm text-slate-600">
-            {credentials.map((item) => (
-              <li key={item} className="flex items-start gap-3">
-                <CheckCircle2
-                  className="mt-1 h-5 w-5 flex-shrink-0 text-brand-accent"
-                  aria-hidden="true"
-                />
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
         </div>
       </div>
     </Section>

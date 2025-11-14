@@ -1,9 +1,11 @@
 import {
-  Activity,
   Baby,
+  Bone,
+  Brain,
   Dumbbell,
-  Headphones,
   HeartPulse,
+  Smile,
+  Stethoscope,
   StretchHorizontal
 } from "lucide-react";
 import Section from "./Section";
@@ -11,46 +13,68 @@ import type { ServiceItem } from "../types";
 
 const services: ServiceItem[] = [
   {
-    title: "Dolori cervicali",
-    description:
-      "Tecniche mirate per ridurre tensioni muscolari e migliorare la mobilità del tratto cervicale.",
-    icon: Headphones,
-    href: "#contact"
+    title: "Dolori muscolo-scheletrici",
+    icon: Bone,
+    points: [
+      "Lombalgia, cervicalgia e dorsalgia",
+      "Tensioni muscolari ricorrenti",
+      "Dolori articolari (spalla, ginocchio, anca, polso, caviglia)",
+      "Rigidità o limitazioni di movimento dopo traumi o interventi"
+    ]
   },
   {
-    title: "Lombalgia e sciatalgia",
-    description:
-      "Approccio globale per alleviare il dolore lombare, sciatico e favorire il recupero funzionale.",
-    icon: Activity,
-    href: "#contact"
+    title: "Disturbi temporo-mandibolari (ATM)",
+    icon: Smile,
+    points: ["Dolore o click alla mandibola", "Bruxismo"]
   },
   {
-    title: "Cefalee e posture",
-    description:
-      "Valutazione posturale completa per comprendere e trattare cefalee legate a squilibri muscolo-scheletrici.",
-    icon: StretchHorizontal,
-    href: "#contact"
+    title: "Cefalee e disturbi correlati",
+    icon: Brain,
+    points: ["Cefalee muscolo-tensive ed emicranie di origine cervicale"]
   },
   {
-    title: "Dolori articolari",
-    description:
-      "Trattamenti manuali per spalle, anche, ginocchia e altre articolazioni con focus su funzionalità e prevenzione.",
+    title: "Disturbi viscerali",
+    icon: Stethoscope,
+    points: [
+      "Reflusso gastroesofageo, stipsi",
+      "Tensioni diaframmatiche o toraciche che influenzano la respirazione",
+      "Disagi legati al ciclo mestruale"
+    ]
+  },
+  {
+    title: "Gravidanza e post-parto",
     icon: HeartPulse,
-    href: "#contact"
+    points: [
+      "Dolori lombari, pelvici o pubici durante la gravidanza",
+      "Preparazione del corpo al parto",
+      "Recupero post-parto: postura, cicatrici, diastasi addominale"
+    ]
   },
   {
-    title: "Sport e performance",
-    description:
-      "Supporto a chi pratica sport per prevenire infortuni, ottimizzare la performance e velocizzare il recupero.",
-    icon: Dumbbell,
-    href: "#contact"
-  },
-  {
-    title: "Gravidanza e post-partum",
-    description:
-      "Percorsi delicati per il benessere della mamma, dalla gestazione al recupero post parto.",
+    title: "Ambito pediatrico",
     icon: Baby,
-    href: "#contact"
+    points: [
+      "Rigurgiti, coliche, stipsi",
+      "Difficoltà nella suzione",
+      "Preferenza di rotazione del capo da un lato, torcicollo miogeno, plagiocefalia",
+      "Supporto alla crescita",
+      "Disturbi legati a tensioni post-parto"
+    ]
+  },
+  {
+    title: "Ambito sportivo",
+    icon: Dumbbell,
+    points: [
+      "Recupero da traumi o sovraccarichi (tendiniti, stiramenti, contratture)",
+      "Ottimizzazione della performance e prevenzione degli infortuni",
+      "Miglioramento della mobilità articolare e del gesto atletico",
+      "Gestione del dolore muscolare o articolare legato all'attività sportiva"
+    ]
+  },
+  {
+    title: "Controllo posturale",
+    icon: StretchHorizontal,
+    points: ["Prevenzione e mantenimento di un buon equilibrio corporeo"]
   }
 ];
 
@@ -59,8 +83,8 @@ const Services = () => {
     <Section
       id="services"
       eyebrow="Cosa tratto"
-      title="Trattamenti personalizzati per ogni esigenza"
-      description="Ogni trattamento parte da un ascolto attento e da una valutazione approfondita. L'obiettivo è migliorare il movimento, alleviare il dolore favorendo un buon equilibrio del corpo."
+      title="Trattamenti personalizzati per il tuo benessere o quello del tuo bambino "
+      description="Ogni trattamento parte da un ascolto attento e da una valutazione personalizzata approfondita. L'obiettivo è favorire un buon equilibrio del corpo."
       background="muted"
     >
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -76,17 +100,25 @@ const Services = () => {
               <h3 className="text-xl font-semibold text-slate-900">
                 {service.title}
               </h3>
-              <p className="text-sm text-slate-600">{service.description}</p>
+              {service.description && (
+                <p className="text-sm text-slate-600">
+                  {service.description}
+                </p>
+              )}
+              {service.points && (
+                <ul className="space-y-2 text-sm text-slate-600">
+                  {service.points.map((point) => (
+                    <li key={point} className="flex gap-2">
+                      <span
+                        aria-hidden="true"
+                        className="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-brand-primary"
+                      />
+                      <span>{point}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
             </div>
-            <a
-              href={service.href}
-              className="mt-6 inline-flex items-center text-sm font-semibold text-brand-primary transition group-hover:translate-x-1"
-            >
-              Scopri di più
-              <span aria-hidden="true" className="ml-1">
-                →
-              </span>
-            </a>
           </article>
         ))}
       </div>

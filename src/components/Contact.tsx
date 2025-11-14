@@ -29,9 +29,9 @@ const Contact = () => {
         </>
       )}
     >
-      <div className="grid gap-12 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:items-start">
-        <div className="space-y-8 text-center lg:text-left lg:pr-10">
-          <div className="grid gap-6 text-sm text-slate-700 max-w-xl mx-auto lg:mx-0 w-full">
+      <div className="grid gap-12 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:items-stretch">
+        <div className="space-y-8 text-center lg:text-left lg:pr-10 lg:flex lg:h-full lg:flex-col lg:gap-10 lg:space-y-0">
+          <div className="grid gap-6 text-sm text-slate-700 max-w-xl mx-auto lg:mx-0 w-full lg:flex-1 lg:gap-8">
             <ContactField
               icon={PhoneCall}
               label="Telefono"
@@ -77,20 +77,6 @@ const Contact = () => {
                 </div>
               }
             />
-          </div>
-          <div className="flex flex-wrap justify-center gap-3 lg:justify-start max-w-xl mx-auto lg:mx-0">
-            {CONTACT_DETAILS.locations.map((location) => (
-              <a
-                key={location.address}
-                href={location.mapsUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full border border-brand-primary/20 px-5 py-2 text-sm font-semibold text-brand-primary transition hover:-translate-y-0.5 hover:border-brand-primary"
-              >
-                <MapPin className="h-4 w-4" aria-hidden="true" />
-                {location.shortLabel ?? location.label}
-              </a>
-            ))}
           </div>
         </div>
         <div className="grid w-full max-w-3xl gap-6 mx-auto">

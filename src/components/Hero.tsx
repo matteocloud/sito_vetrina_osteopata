@@ -36,11 +36,6 @@ const Hero = () => {
           >
             Osteopatia per il tuo benessere quotidiano
           </h1>
-          <p className="text-lg text-slate-600 sm:text-xl">
-            Valutazioni personalizzate, trattamenti mirati e risultati
-            misurabili. Supporto continuo per migliorare postura, mobilità e
-            qualità della vita.
-          </p>
           <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
             <button
               type="button"

@@ -11,7 +11,8 @@ export type BrandPalette = {
 
 export type ServiceItem = {
   title: string;
-  description: string;
+  description?: string;
+  points?: string[];
   icon: LucideIcon;
   href?: string;
 };
